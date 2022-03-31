@@ -1,8 +1,9 @@
-<?php require_once('/var/www/public_html/config.php');
- 
- require "Produto.php";  // this will include the file
+<?php 
+    require_once("Produto.php");
+    require_once("Fabricante.php");
 
- include_once "Produto.php";  // this will not as it was included using "require"
- 
- require_once "Produto.php";  // this will not as it was included using "require"
- 
+    $Carro = new produto;
+    $Carro->setFabricante = "Lamborghini";
+    $fabricante = new fabricante;
+
+    echo "A descricao do produto é {$Carro->getDescricao()} e seu fabricante é {$fabricante-getNome()}";
